@@ -13,6 +13,8 @@ risk_free_rate=col2.number_input("Risk Free Rate",step=0.01)
 volatility=col2.number_input("Voltility",step=0.01)
 dstp=col1.number_input("Change in Stock Price",step=0.001)
 dsg=col2.number_input("Change in Volatiltiy",step=0.01)
+pnl_call=0
+pnl_put=0
 if(volatility!=0):
 
     d1=(np.log(stock_price/strike_price)+((risk_free_rate+0.5*volatility**2)*days_to_maturity)/(volatility*np.sqrt(days_to_maturity)))
